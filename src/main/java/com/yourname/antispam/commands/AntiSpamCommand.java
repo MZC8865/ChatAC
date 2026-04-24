@@ -23,12 +23,6 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        // Debug: log invocation details
-        if (sender != null) {
-            String who = (sender.getName() != null) ? sender.getName() : "console";
-            plugin.getLogger().info("ChatCommand invoked by " + who + " label=" + label + " args=" + Arrays.toString(args));
-        }
-        
         // Check if this is /chat antispam command
         if (args.length >= 1 && args[0].equalsIgnoreCase("antispam")) {
             return handleAntiSpamCommand(sender, args);
@@ -83,7 +77,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
                 long ms = Long.parseLong(cleaned);
                 plugin.setAntiSpamDelayMs(ms);
                 plugin.saveConfigValue("anti-spam.delay-ms", ms);
-                sender.sendMessage("AntiSpam 延迟已设置为 " + ms + " ms 并保存到配置文件");
+                sender.sendMessage("AntiSpam 延迟已设置为 " + ms + " ms");
             } catch (NumberFormatException e) {
                 sender.sendMessage("用法错误: /chat antispam delay <毫秒数>");
             }
@@ -100,7 +94,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
                 }
                 plugin.setSimilarityThreshold(threshold);
                 plugin.saveConfigValue("anti-spam.similarity-threshold", threshold);
-                sender.sendMessage("相似度阈值已设置为 " + String.format("%.2f", threshold * 100) + "% 并保存到配置文件");
+                sender.sendMessage("相似度阈值已设置为 " + String.format("%.2f", threshold * 100));
             } catch (NumberFormatException e) {
                 sender.sendMessage("用法错误: /chat antispam similarity <0.0-1.0>");
             }
@@ -112,7 +106,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             boolean newState = !plugin.isSimilarityCheckEnabled();
             plugin.setSimilarityCheckEnabled(newState);
             plugin.saveConfigValue("anti-spam.similarity-check", newState);
-            sender.sendMessage("相似度检测已" + (newState ? "启用" : "禁用") + " 并保存到配置文件");
+            sender.sendMessage("相似度检测已" + (newState ? "启用" : "禁用"));
             return true;
         }
         
@@ -121,7 +115,16 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             boolean newState = !plugin.isProfanityFilterEnabled();
             plugin.setProfanityFilterEnabled(newState);
             plugin.saveConfigValue("anti-spam.profanity-filter", newState);
-            sender.sendMessage("违规词过滤已" + (newState ? "启用" : "禁用") + " 并保存到配置文件");
+            sender.sendMessage("违规词过滤已" + (newState ? "启用" : "禁用"));
+            return true;
+        }
+        
+        // /chat antispam toggle interval
+        if (subArgs.length >= 2 && subArgs[0].equalsIgnoreCase("toggle") && subArgs[1].equalsIgnoreCase("interval")) {
+            boolean newState = !plugin.isIntervalCheckEnabled();
+            plugin.setIntervalCheckEnabled(newState);
+            plugin.saveConfigValue("anti-spam.interval-check", newState);
+            sender.sendMessage("消息间隔检测已" + (newState ? "启用" : "禁用"));
             return true;
         }
         
@@ -135,6 +138,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage("- profanityFilter: " + (plugin.isProfanityFilterEnabled() ? "启用" : "禁用"));
             sender.sendMessage("- blockedWords: " + plugin.getProfanityFilter().getBlockedWordCount() + " 个");
             sender.sendMessage("- whisperCheck: " + (plugin.isWhisperCheckEnabled() ? "启用" : "禁用"));
+            sender.sendMessage("- intervalCheck: " + (plugin.isIntervalCheckEnabled() ? "启用" : "禁用"));
             return true;
         }
         
@@ -151,6 +155,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage("/chat antispam similarity <0.0-1.0> - 设置相似度阈值");
         sender.sendMessage("/chat antispam toggle similarity - 开关相似度检测");
         sender.sendMessage("/chat antispam toggle profanity - 开关违规词过滤");
+        sender.sendMessage("/chat antispam toggle interval - 开关消息间隔检测");
         sender.sendMessage("/chat antispam status - 查看当前配置");
         sender.sendMessage("/chat antispam reload - 重新加载配置");
         return true;
@@ -353,7 +358,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         
         // /chat stats <player>
         if (args.length < 2) {
-            sender.sendMessage("用法: /chat stats <玩家名>");
+            sender.sendMessage("用法: /chat stats <玩家名> [list [时间]]");
             return true;
         }
         
@@ -373,16 +378,163 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         
-        sender.sendMessage("=== " + target.getName() + " 的统计数据 ===");
-        sender.sendMessage("消息数量: " + stats.getMessages());
-        sender.sendMessage("违规次数: " + stats.getViolations());
+        // /chat stats <player> list [time]
+        if (args.length >= 3 && args[2].equalsIgnoreCase("list")) {
+            return handleStatsListCommand(sender, target, stats, args);
+        }
+        
+        // Default stats display with colors
+        sender.sendMessage(org.bukkit.ChatColor.GREEN + "=== " + target.getName() + " 的统计数据 ===");
+        sender.sendMessage(org.bukkit.ChatColor.AQUA + "消息数量: " + org.bukkit.ChatColor.WHITE + stats.getMessages());
+        sender.sendMessage(org.bukkit.ChatColor.AQUA + "违规次数: " + org.bukkit.ChatColor.WHITE + stats.getViolations());
         
         if (stats.getMessages() > 0) {
             double violationRate = (double) stats.getViolations() / stats.getMessages() * 100;
-            sender.sendMessage("违规率: " + String.format("%.2f", violationRate) + "%");
+            org.bukkit.ChatColor rateColor = violationRate > 50 ? org.bukkit.ChatColor.RED : 
+                                             violationRate > 20 ? org.bukkit.ChatColor.YELLOW : 
+                                             org.bukkit.ChatColor.GREEN;
+            sender.sendMessage(org.bukkit.ChatColor.AQUA + "违规率: " + rateColor + String.format("%.2f", violationRate) + "%");
         }
         
         return true;
+    }
+    
+    /**
+     * Handle /chat stats <player> list [time] command.
+     * Shows violation history within the specified time period.
+     * Groups consecutive identical violations together.
+     */
+    private boolean handleStatsListCommand(CommandSender sender, org.bukkit.entity.Player target, 
+            com.yourname.antispam.managers.StatsManager.PlayerStats stats, String[] args) {
+        // Parse time parameter (default 5 minutes)
+        int minutes = 5;
+        if (args.length >= 4) {
+            String timeStr = args[3];
+            long seconds = parseTime(timeStr);
+            if (seconds > 0) {
+                minutes = (int) (seconds / 60);
+                if (minutes == 0) minutes = 1; // At least 1 minute
+            } else {
+                sender.sendMessage(org.bukkit.ChatColor.RED + "无效的时间格式: " + timeStr);
+                sender.sendMessage("时间格式: 数字+单位 (s=秒, m=分钟, h=小时, d=天)");
+                return true;
+            }
+        }
+        
+        // Get recent violations
+        java.util.List<com.yourname.antispam.managers.StatsManager.ViolationRecord> violations = 
+            stats.getRecentViolations(minutes);
+        
+        if (violations.isEmpty()) {
+            sender.sendMessage(org.bukkit.ChatColor.YELLOW + "玩家 " + target.getName() + 
+                " 在过去 " + minutes + " 分钟内没有违规记录");
+            return true;
+        }
+        
+        // Group consecutive identical violations
+        java.util.List<GroupedViolation> groupedViolations = groupViolations(violations);
+        
+        // Display violations
+        sender.sendMessage(org.bukkit.ChatColor.GREEN + "=== " + target.getName() + 
+            " 的违规记录（过去 " + minutes + " 分钟）===");
+        sender.sendMessage(org.bukkit.ChatColor.GRAY + "共 " + violations.size() + " 条违规，" + 
+            groupedViolations.size() + " 组记录：");
+        
+        java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("HH:mm:ss");
+        
+        for (GroupedViolation group : groupedViolations) {
+            String startTime = dateFormat.format(new java.util.Date(group.startTimestamp));
+            String endTime = dateFormat.format(new java.util.Date(group.endTimestamp));
+            String type = group.type;
+            String message = group.message;
+            int count = group.count;
+            
+            // Format: [开始时间 - 结束时间] 原因: 消息内容 (*次数)
+            StringBuilder sb = new StringBuilder();
+            sb.append(org.bukkit.ChatColor.GRAY);
+            
+            if (count == 1) {
+                // Single violation: [时间] 原因: 消息
+                sb.append("[").append(startTime).append("] ");
+            } else {
+                // Multiple violations: [开始时间 - 结束时间] 原因: 消息 (*次数)
+                sb.append("[").append(startTime).append(" - ").append(endTime).append("] ");
+            }
+            
+            sb.append(org.bukkit.ChatColor.RED).append(type).append(": ");
+            sb.append(org.bukkit.ChatColor.YELLOW).append(message.isEmpty() ? "(无消息内容)" : message);
+            
+            if (count > 1) {
+                sb.append(org.bukkit.ChatColor.GOLD).append(" (x").append(count).append(")");
+            }
+            
+            sender.sendMessage(sb.toString());
+        }
+        
+        return true;
+    }
+    
+    /**
+     * Group consecutive violations with the same type and message.
+     */
+    private java.util.List<GroupedViolation> groupViolations(
+            java.util.List<com.yourname.antispam.managers.StatsManager.ViolationRecord> violations) {
+        java.util.List<GroupedViolation> grouped = new java.util.ArrayList<>();
+        
+        if (violations.isEmpty()) {
+            return grouped;
+        }
+        
+        GroupedViolation current = null;
+        
+        for (com.yourname.antispam.managers.StatsManager.ViolationRecord record : violations) {
+            String key = record.getType() + "|" + record.getMessage();
+            
+            if (current == null) {
+                // First record
+                current = new GroupedViolation(record.getTimestamp(), record.getTimestamp(), 
+                    record.getType(), record.getMessage(), 1);
+            } else {
+                String currentKey = current.type + "|" + current.message;
+                
+                if (key.equals(currentKey)) {
+                    // Same violation, update end time and increment count
+                    current.endTimestamp = record.getTimestamp();
+                    current.count++;
+                } else {
+                    // Different violation, save current and start new group
+                    grouped.add(current);
+                    current = new GroupedViolation(record.getTimestamp(), record.getTimestamp(), 
+                        record.getType(), record.getMessage(), 1);
+                }
+            }
+        }
+        
+        // Add the last group
+        if (current != null) {
+            grouped.add(current);
+        }
+        
+        return grouped;
+    }
+    
+    /**
+     * Helper class to group consecutive identical violations.
+     */
+    private static class GroupedViolation {
+        long startTimestamp;
+        long endTimestamp;
+        String type;
+        String message;
+        int count;
+        
+        GroupedViolation(long startTimestamp, long endTimestamp, String type, String message, int count) {
+            this.startTimestamp = startTimestamp;
+            this.endTimestamp = endTimestamp;
+            this.type = type;
+            this.message = message;
+            this.count = count;
+        }
     }
     
     /**
@@ -528,6 +680,19 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
                         completions.add(p.getName());
                     }
                 }
+            } else if (args.length == 3) {
+                // Suggest "list" subcommand
+                if ("list".startsWith(args[2].toLowerCase())) {
+                    completions.add("list");
+                }
+            } else if (args.length == 4 && args[2].equalsIgnoreCase("list")) {
+                // Suggest time formats
+                String[] suggestions = {"5m", "10m", "30m", "1h", "2h", "1d"};
+                for (String s : suggestions) {
+                    if (s.startsWith(args[3].toLowerCase())) {
+                        completions.add(s);
+                    }
+                }
             }
             return completions;
         }
@@ -572,7 +737,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         
         // /chat antispam toggle <tab> -> suggest "similarity"
         if (args.length == 3 && args[1].equalsIgnoreCase("toggle")) {
-            String[] options = {"similarity", "profanity"};
+            String[] options = {"similarity", "profanity", "interval"};
             for (String opt : options) {
                 if (opt.startsWith(args[2].toLowerCase())) {
                     completions.add(opt);

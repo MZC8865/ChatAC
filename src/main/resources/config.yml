@@ -18,3 +18,6 @@ anti-spam:
   
   # 私信检测配置
   whisper-check: true             # 是否对私信进行检测（true=检测私信，false=不检测私信）
+  
+  # 消息间隔模式检测配置
+  interval-check: true            # 是否启用间隔模式检测（检测机器人刷屏）

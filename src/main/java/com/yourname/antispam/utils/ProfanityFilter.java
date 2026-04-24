@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  * Utility class for filtering profanity and blocked words from messages.
+ * Includes normalization to prevent bypassing with spaces, symbols, etc.
  */
 public class ProfanityFilter {
     private final Set<String> blockedWords;
@@ -15,15 +16,34 @@ public class ProfanityFilter {
         if (blockedWordsList != null) {
             for (String word : blockedWordsList) {
                 if (word != null && !word.trim().isEmpty()) {
-                    // Store in lowercase for case-insensitive matching
-                    this.blockedWords.add(word.toLowerCase().trim());
+                    // Store normalized version for matching
+                    this.blockedWords.add(normalizeString(word));
                 }
             }
         }
     }
     
     /**
+     * Normalize a string by removing spaces, symbols, and special characters.
+     * Keeps only letters, numbers, and converts to lowercase.
+     * This prevents bypassing filters with spaces/symbols (e.g., "傻 逼", "傻@逼").
+     * 
+     * @param str The string to normalize
+     * @return Normalized string with only letters and numbers
+     */
+    private String normalizeString(String str) {
+        if (str == null || str.isEmpty()) {
+            return "";
+        }
+        
+        // Remove all non-letter and non-digit characters, convert to lowercase
+        return str.toLowerCase()
+                  .replaceAll("[^a-z0-9\\p{L}\\p{N}]", "");
+    }
+    
+    /**
      * Check if a message contains any blocked words.
+     * Uses normalization to prevent bypassing with spaces/symbols.
      * 
      * @param message The message to check
      * @return true if the message contains blocked words
@@ -33,11 +53,12 @@ public class ProfanityFilter {
             return false;
         }
         
-        String lowerMessage = message.toLowerCase();
+        // Normalize the message to prevent bypassing
+        String normalizedMessage = normalizeString(message);
         
         // Check each blocked word
         for (String blockedWord : blockedWords) {
-            if (lowerMessage.contains(blockedWord)) {
+            if (normalizedMessage.contains(blockedWord)) {
                 return true;
             }
         }
@@ -47,6 +68,7 @@ public class ProfanityFilter {
     
     /**
      * Find the first blocked word in a message.
+     * Uses normalization to prevent bypassing with spaces/symbols.
      * 
      * @param message The message to check
      * @return The first blocked word found, or null if none found
@@ -56,10 +78,11 @@ public class ProfanityFilter {
             return null;
         }
         
-        String lowerMessage = message.toLowerCase();
+        // Normalize the message to prevent bypassing
+        String normalizedMessage = normalizeString(message);
         
         for (String blockedWord : blockedWords) {
-            if (lowerMessage.contains(blockedWord)) {
+            if (normalizedMessage.contains(blockedWord)) {
                 return blockedWord;
             }
         }
@@ -86,7 +109,8 @@ public class ProfanityFilter {
         if (blockedWordsList != null) {
             for (String word : blockedWordsList) {
                 if (word != null && !word.trim().isEmpty()) {
-                    blockedWords.add(word.toLowerCase().trim());
+                    // Store normalized version
+                    blockedWords.add(normalizeString(word));
                 }
             }
         }

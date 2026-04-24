@@ -1,5 +1,5 @@
-name: AntiSpam
-version: 1.0
+name: ChatAC
+version: 3.1
 main: com.yourname.antispam.AntiSpamPlugin
 api-version: "1.21"
 authors:
@@ -12,5 +12,5 @@ commands:
 
 permissions:
   antispam.admin:
-    description: Allow configuring AntiSpam settings
+    description: Allow configuring ChatAC settings
     default: op

@@ -31,6 +31,8 @@ public class AntiSpamPlugin extends JavaPlugin {
     private ProfanityFilter profanityFilter;
     // Whisper check configuration
     private volatile boolean whisperCheckEnabled = true;
+    // Interval pattern detection configuration
+    private volatile boolean intervalCheckEnabled = true;
     // Mute manager
     private MuteManager muteManager;
     // Whitelist manager
@@ -201,6 +203,16 @@ public class AntiSpamPlugin extends JavaPlugin {
         getLogger().info("Whisper check " + (enabled ? "enabled" : "disabled"));
     }
 
+    // Getters/setters for interval pattern detection
+    public synchronized boolean isIntervalCheckEnabled() {
+        return intervalCheckEnabled;
+    }
+
+    public synchronized void setIntervalCheckEnabled(boolean enabled) {
+        this.intervalCheckEnabled = enabled;
+        getLogger().info("Interval pattern check " + (enabled ? "enabled" : "disabled"));
+    }
+
     // Getter for mute manager
     public MuteManager getMuteManager() {
         return muteManager;
@@ -238,13 +250,17 @@ public class AntiSpamPlugin extends JavaPlugin {
         // Load whisper check setting
         this.whisperCheckEnabled = getConfig().getBoolean("anti-spam.whisper-check", true);
         
+        // Load interval check setting
+        this.intervalCheckEnabled = getConfig().getBoolean("anti-spam.interval-check", true);
+        
         getLogger().info("AntiSpam config loaded: delayMs=" + antiSpamDelayMs + 
             ", similarityCheck=" + similarityCheckEnabled + 
             ", threshold=" + similarityThreshold + 
             ", minLength=" + minLengthForCheck +
             ", profanityFilter=" + profanityFilterEnabled +
             ", blockedWords=" + profanityFilter.getBlockedWordCount() +
-            ", whisperCheck=" + whisperCheckEnabled);
+            ", whisperCheck=" + whisperCheckEnabled +
+            ", intervalCheck=" + intervalCheckEnabled);
     }
     
     // Save a config value to disk

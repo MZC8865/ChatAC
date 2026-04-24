@@ -3,6 +3,9 @@ plugins {
     id("xyz.jpenilla.run-paper") version "3.0.2"
 }
 
+version = "3.1"
+group = "com.yourname.chatac"
+
 repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
@@ -23,6 +26,9 @@ tasks {
         // Your plugin's jar (or shadowJar if present) will be used automatically.
         minecraftVersion("1.21.11")
         jvmArgs("-Xms2G", "-Xmx2G")
+        
+        // Set the working directory to the current project's run folder
+        runDirectory.set(file("run"))
     }
 
     processResources {
@@ -30,5 +36,9 @@ tasks {
         filesMatching("paper-plugin.yml") {
             expand(props)
         }
+    }
+    
+    jar {
+        archiveBaseName.set("ChatAC")
     }
 }

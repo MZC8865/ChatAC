@@ -1,1 +1,1 @@
-rootProject.name = "AntiSpam"
+rootProject.name = "ChatAC"
