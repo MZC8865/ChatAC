@@ -3,48 +3,48 @@
     "minecraft:killed": {
       "minecraft:zombie": 1
     },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 169283,
+      "minecraft:walk_one_cm": 32929,
+      "minecraft:leave_game": 22,
+      "minecraft:mob_kills": 2,
+      "minecraft:walk_under_water_one_cm": 21558,
+      "minecraft:damage_taken": 109,
+      "minecraft:damage_dealt": 174,
+      "minecraft:play_time": 169283,
+      "minecraft:jump": 1720,
+      "minecraft:time_since_death": 169283,
+      "minecraft:drop": 3,
+      "minecraft:sprint_one_cm": 91163,
+      "minecraft:fall_one_cm": 1800,
+      "minecraft:swim_one_cm": 4499,
+      "minecraft:total_world_time": 169283,
+      "minecraft:fly_one_cm": 639915,
+      "minecraft:walk_on_water_one_cm": 1645,
+      "minecraft:crouch_one_cm": 4497,
+      "minecraft:sneak_time": 1186
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 10
+    },
     "minecraft:dropped": {
       "minecraft:stone": 1,
       "minecraft:dark_oak_leaves": 1,
       "minecraft:oak_leaves": 1
     },
-    "minecraft:mined": {
-      "minecraft:short_grass": 10
-    },
     "minecraft:used": {
-      "minecraft:stone": 155,
-      "minecraft:dark_oak_leaves": 308,
+      "minecraft:stone": 269,
+      "minecraft:dark_oak_leaves": 324,
       "minecraft:hoglin_spawn_egg": 10,
       "minecraft:llama_spawn_egg": 128,
-      "minecraft:snowball": 2348,
+      "minecraft:snowball": 4214,
       "minecraft:oak_leaves": 3,
-      "minecraft:ender_pearl": 14,
+      "minecraft:ender_pearl": 26,
       "minecraft:snow_golem_spawn_egg": 1398,
       "minecraft:skeleton_spawn_egg": 7
     },
     "minecraft:picked_up": {
       "minecraft:snowball": 15
-    },
-    "minecraft:custom": {
-      "minecraft:time_since_rest": 146973,
-      "minecraft:walk_one_cm": 26611,
-      "minecraft:leave_game": 20,
-      "minecraft:mob_kills": 2,
-      "minecraft:walk_under_water_one_cm": 660,
-      "minecraft:damage_taken": 109,
-      "minecraft:damage_dealt": 174,
-      "minecraft:play_time": 146973,
-      "minecraft:jump": 1281,
-      "minecraft:time_since_death": 146973,
-      "minecraft:drop": 3,
-      "minecraft:sprint_one_cm": 72394,
-      "minecraft:fall_one_cm": 1800,
-      "minecraft:swim_one_cm": 1263,
-      "minecraft:total_world_time": 146973,
-      "minecraft:fly_one_cm": 519441,
-      "minecraft:walk_on_water_one_cm": 710,
-      "minecraft:crouch_one_cm": 4455,
-      "minecraft:sneak_time": 909
     }
   },
   "DataVersion": 4671

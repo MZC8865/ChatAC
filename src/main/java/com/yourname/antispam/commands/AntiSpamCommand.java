@@ -128,6 +128,47 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             return true;
         }
         
+        // /chat antispam toggle automute
+        if (subArgs.length >= 2 && subArgs[0].equalsIgnoreCase("toggle") && subArgs[1].equalsIgnoreCase("automute")) {
+            boolean newState = !plugin.isAutoMuteEnabled();
+            plugin.setAutoMuteEnabled(newState);
+            plugin.saveConfigValue("anti-spam.auto-mute.enabled", newState);
+            sender.sendMessage("自动禁言已" + (newState ? "启用" : "禁用"));
+            return true;
+        }
+        
+        // /chat antispam automute threshold <number>
+        if (subArgs.length >= 3 && subArgs[0].equalsIgnoreCase("automute") && subArgs[1].equalsIgnoreCase("threshold")) {
+            try {
+                int violations = Integer.parseInt(subArgs[2]);
+                if (violations < 1) {
+                    sender.sendMessage("违规次数必须大于0");
+                    return true;
+                }
+                plugin.setAutoMuteViolationsPerMinute(violations);
+                plugin.saveConfigValue("anti-spam.auto-mute.violations-per-minute", violations);
+                sender.sendMessage("自动禁言阈值已设置为 " + violations + " 次/分钟");
+            } catch (NumberFormatException e) {
+                sender.sendMessage("用法错误: /chat antispam automute threshold <次数>");
+            }
+            return true;
+        }
+        
+        // /chat antispam automute duration <time>
+        if (subArgs.length >= 3 && subArgs[0].equalsIgnoreCase("automute") && subArgs[1].equalsIgnoreCase("duration")) {
+            long seconds = parseTime(subArgs[2]);
+            if (seconds <= 0) {
+                sender.sendMessage("无效的时间格式: " + subArgs[2]);
+                sender.sendMessage("时间格式: 数字+单位 (s=秒, m=分钟, h=小时, d=天)");
+                return true;
+            }
+            plugin.setAutoMuteDuration(seconds);
+            plugin.saveConfigValue("anti-spam.auto-mute.mute-duration", seconds);
+            String timeStr = plugin.getMuteManager().formatTime(seconds);
+            sender.sendMessage("自动禁言时长已设置为 " + timeStr);
+            return true;
+        }
+        
         // /chat antispam status
         if (subArgs.length >= 1 && subArgs[0].equalsIgnoreCase("status")) {
             sender.sendMessage("AntiSpam Status:");
@@ -139,6 +180,9 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
             sender.sendMessage("- blockedWords: " + plugin.getProfanityFilter().getBlockedWordCount() + " 个");
             sender.sendMessage("- whisperCheck: " + (plugin.isWhisperCheckEnabled() ? "启用" : "禁用"));
             sender.sendMessage("- intervalCheck: " + (plugin.isIntervalCheckEnabled() ? "启用" : "禁用"));
+            sender.sendMessage("- autoMute: " + (plugin.isAutoMuteEnabled() ? "启用" : "禁用") + 
+                " (阈值: " + plugin.getAutoMuteViolationsPerMinute() + " 次/分钟, 时长: " + 
+                plugin.getAutoMuteDuration() + " 秒)");
             return true;
         }
         
@@ -156,6 +200,9 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage("/chat antispam toggle similarity - 开关相似度检测");
         sender.sendMessage("/chat antispam toggle profanity - 开关违规词过滤");
         sender.sendMessage("/chat antispam toggle interval - 开关消息间隔检测");
+        sender.sendMessage("/chat antispam toggle automute - 开关自动禁言");
+        sender.sendMessage("/chat antispam automute threshold <次数> - 设置自动禁言阈值");
+        sender.sendMessage("/chat antispam automute duration <时间> - 设置自动禁言时长");
         sender.sendMessage("/chat antispam status - 查看当前配置");
         sender.sendMessage("/chat antispam reload - 重新加载配置");
         return true;
@@ -704,7 +751,7 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         
         // /chat antispam <tab> -> suggest subcommands
         if (args.length == 2) {
-            String[] subcommands = {"delay", "similarity", "toggle", "status", "reload"};
+            String[] subcommands = {"delay", "similarity", "toggle", "automute", "status", "reload"};
             for (String sub : subcommands) {
                 if (sub.startsWith(args[1].toLowerCase())) {
                     completions.add(sub);
@@ -737,10 +784,43 @@ public class AntiSpamCommand implements CommandExecutor, TabCompleter {
         
         // /chat antispam toggle <tab> -> suggest "similarity"
         if (args.length == 3 && args[1].equalsIgnoreCase("toggle")) {
-            String[] options = {"similarity", "profanity", "interval"};
+            String[] options = {"similarity", "profanity", "interval", "automute"};
             for (String opt : options) {
                 if (opt.startsWith(args[2].toLowerCase())) {
                     completions.add(opt);
+                }
+            }
+            return completions;
+        }
+        
+        // /chat antispam automute <tab> -> suggest "threshold", "duration"
+        if (args.length == 3 && args[1].equalsIgnoreCase("automute")) {
+            String[] options = {"threshold", "duration"};
+            for (String opt : options) {
+                if (opt.startsWith(args[2].toLowerCase())) {
+                    completions.add(opt);
+                }
+            }
+            return completions;
+        }
+        
+        // /chat antispam automute threshold <tab> -> suggest numbers
+        if (args.length == 4 && args[1].equalsIgnoreCase("automute") && args[2].equalsIgnoreCase("threshold")) {
+            String[] suggestions = {"3", "5", "10", "15", "20"};
+            for (String s : suggestions) {
+                if (s.startsWith(args[3])) {
+                    completions.add(s);
+                }
+            }
+            return completions;
+        }
+        
+        // /chat antispam automute duration <tab> -> suggest time formats
+        if (args.length == 4 && args[1].equalsIgnoreCase("automute") && args[2].equalsIgnoreCase("duration")) {
+            String[] suggestions = {"30s", "1m", "5m", "10m", "30m", "1h"};
+            for (String s : suggestions) {
+                if (s.startsWith(args[3].toLowerCase())) {
+                    completions.add(s);
                 }
             }
             return completions;

@@ -65,7 +65,7 @@ public class ChatLimiter implements Listener {
     
     /**
      * Check if a player's message intervals show a suspicious pattern.
-     * Detects if the last 3 intervals are nearly identical (within 1-2ms tolerance).
+     * Detects if the last 2 intervals are nearly identical (within 5ms tolerance).
      * Once detected, the player is flagged and all subsequent messages with similar intervals are blocked.
      * 
      * @param playerUUID Player's UUID
@@ -73,7 +73,7 @@ public class ChatLimiter implements Listener {
      * @return true if a suspicious pattern is detected
      */
     private boolean isIntervalPatternDetected(UUID playerUUID, long currentInterval) {
-        long tolerance = 2L; // 2ms tolerance
+        long tolerance = 5L; // 5ms tolerance
         
         // Check if player is already flagged
         Long flagTime = botFlaggedPlayers.get(playerUUID);
@@ -92,36 +92,33 @@ public class ChatLimiter implements Listener {
             }
         }
         
-        // Not flagged yet, check for initial pattern (3 consecutive similar intervals)
+        // Not flagged yet, check for initial pattern (2 consecutive similar intervals)
         java.util.LinkedList<Long> intervals = messageIntervals.get(playerUUID);
         
-        // Need at least 2 previous intervals to compare
-        if (intervals == null || intervals.size() < 2) {
+        // Need at least 1 previous interval to compare
+        if (intervals == null || intervals.size() < 1) {
             return false;
         }
         
-        // Get the last 2 intervals
-        Long interval1 = intervals.get(intervals.size() - 2);
-        Long interval2 = intervals.get(intervals.size() - 1);
+        // Get the last interval
+        Long interval1 = intervals.get(intervals.size() - 1);
         
-        if (interval1 == null || interval2 == null) {
+        if (interval1 == null) {
             return false;
         }
         
-        // Check if all 3 intervals are nearly identical (within 2ms tolerance)
-        boolean match1 = Math.abs(interval1 - interval2) <= tolerance;
-        boolean match2 = Math.abs(interval2 - currentInterval) <= tolerance;
-        boolean match3 = Math.abs(interval1 - currentInterval) <= tolerance;
+        // Check if the 2 intervals are nearly identical (within 5ms tolerance)
+        boolean match = Math.abs(interval1 - currentInterval) <= tolerance;
         
-        // All three intervals must be similar
-        if (match1 && match2 && match3) {
+        // Both intervals must be similar
+        if (match) {
             // Flag this player and record the expected interval
-            long avgInterval = (interval1 + interval2 + currentInterval) / 3;
+            long avgInterval = (interval1 + currentInterval) / 2;
             botFlaggedPlayers.put(playerUUID, System.currentTimeMillis());
             expectedInterval.put(playerUUID, avgInterval);
             
             plugin.getLogger().info("Initial bot pattern detected for player " + playerUUID + ": " + 
-                interval1 + "ms, " + interval2 + "ms, " + currentInterval + "ms (avg=" + avgInterval + "ms, tolerance=" + tolerance + "ms)");
+                interval1 + "ms, " + currentInterval + "ms (avg=" + avgInterval + "ms, tolerance=" + tolerance + "ms)");
             plugin.getLogger().info("Player flagged - will block all subsequent messages with similar intervals");
             return true;
         }
@@ -221,8 +218,8 @@ public class ChatLimiter implements Listener {
                     plugin.getLogger().info("AntiSpam: Blocked chat from " + event.getPlayer().getName() + 
                         " (interval pattern detected, suspected bot behavior)");
                     plugin.getStatsManager().recordViolation(id, "bot-pattern", message);
-                    // Update interval but don't update lastMessageTime
-                    updateMessageIntervals(id, interval);
+                    // Update lastMessageTime to keep tracking intervals, but don't update messageIntervals
+                    lastMessageTime.put(id, now);
                     return;
                 }
             }

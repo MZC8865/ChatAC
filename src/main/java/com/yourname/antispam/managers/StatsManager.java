@@ -53,6 +53,7 @@ public class StatsManager {
     
     /**
      * Record a violation by a player with message content.
+     * Also checks if auto-mute should be triggered.
      * 
      * @param playerUUID Player's UUID
      * @param violationType Type of violation
@@ -66,6 +67,56 @@ public class StatsManager {
             violationType,
             message != null ? message : ""
         ));
+        
+        // Check if auto-mute should be triggered
+        checkAutoMute(playerUUID);
+    }
+    
+    /**
+     * Check if a player should be auto-muted based on recent violations.
+     * 
+     * @param playerUUID Player's UUID
+     */
+    private void checkAutoMute(UUID playerUUID) {
+        if (!plugin.isAutoMuteEnabled()) {
+            return;
+        }
+        
+        // Check if player is already muted
+        if (plugin.getMuteManager().isMuted(playerUUID)) {
+            return;
+        }
+        
+        // Get violations in the last minute
+        PlayerStats stats = playerStats.get(playerUUID);
+        if (stats == null) {
+            return;
+        }
+        
+        List<ViolationRecord> recentViolations = stats.getRecentViolations(1);
+        int violationCount = recentViolations.size();
+        int threshold = plugin.getAutoMuteViolationsPerMinute();
+        
+        if (violationCount >= threshold) {
+            // Trigger auto-mute
+            long duration = plugin.getAutoMuteDuration();
+            
+            // Get player name
+            org.bukkit.entity.Player player = plugin.getServer().getPlayer(playerUUID);
+            String playerName = player != null ? player.getName() : playerUUID.toString();
+            
+            // Mute the player
+            plugin.getMuteManager().mutePlayer(playerUUID, playerName, duration);
+            
+            // Notify player
+            if (player != null) {
+                String timeStr = plugin.getMuteManager().formatTime(duration);
+                player.sendMessage(org.bukkit.ChatColor.RED + "你因频繁违规已被自动禁言，时长：" + timeStr);
+            }
+            
+            plugin.getLogger().warning("Auto-muted player " + playerName + " (" + playerUUID + ") for " + 
+                duration + "s due to " + violationCount + " violations in 1 minute (threshold: " + threshold + ")");
+        }
     }
     
     /**

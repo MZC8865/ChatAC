@@ -21,3 +21,9 @@ anti-spam:
   
   # 消息间隔模式检测配置
   interval-check: true            # 是否启用间隔模式检测（检测机器人刷屏）
+  
+  # 自动禁言配置
+  auto-mute:
+    enabled: true                 # 是否启用自动禁言
+    violations-per-minute: 5      # 每分钟违规次数阈值
+    mute-duration: 300            # 禁言时长（秒），默认5分钟

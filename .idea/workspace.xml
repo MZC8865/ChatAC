@@ -5,115 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb6bae83-9706-43ef-b575-2ac6f0acfd70" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ChatAC.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/1z58w2c5gybq3v33agmtaho3u/candidates.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/2x0lt3vv2hsdll2mgpev54qt7/candidates.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/configuration-cache/2x0lt3vv2hsdll2mgpev54qt7/candidates.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/3qygr1vnaza9k59p5iyg9g58d/candidates.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/configuration-cache/3qygr1vnaza9k59p5iyg9g58d/candidates.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/54730e81-a680-4260-b109-05c2a8a8e01d/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c001458-15be-4d38-9d93-6c49b43c8b17/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7c1ce2ab-c05c-4e01-bcc6-83705b1e118d/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/7hjs3pibp1plm4mkbih795rr1/candidates.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/b901bdbe-75a0-44de-b844-0aaece439743/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/build.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/be0e8d22-204c-4578-92fc-37870be9db64/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/c0d3d9mluc7912a152zlm37sl/candidates.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/configuration-cache/c0d3d9mluc7912a152zlm37sl/candidates.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/configuration-cache.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/configuration-cache/configuration-cache.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d005d405-f57a-4295-8de0-ff90dc99b5ee/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/d5b0b4c4-f5c5-45a5-8a95-7c577ffabb7e/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/.globals.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/.strings.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/_.work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/buildfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/classloaderscopes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/entry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/projectfingerprint.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/e0eabcb8-4c5e-4898-bb72-703ac7f6e894/work.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/enj9wbffy6pjpjzgudke1wlqx/candidates.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/exiialgfqf0gl0xf0z5y7uxxc/candidates.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/AntiSpam.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/1z58w2c5gybq3v33agmtaho3u/92w2erfyppwtqaun4u5zm0cnh/configuration-cache-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/c0d3d9mluc7912a152zlm37sl/dcdbpatru53brg1fhy4ywu5s7/configuration-cache-report.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/paper-plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamCommand.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamCommand.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamPlugin$1.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamPlugin$1.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AntiSpamPlugin.class.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ChatLimiter.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MuteManager.class.uniqueId4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/WhisperLimiter.class.uniqueId3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/extra-plugins/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/extra-plugins/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/plugins/.paper-remapped/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/.paper-remapped/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/plugins/AntiSpam/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/plugins/AntiSpam/mutes.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/plugins/ChatAC/stats.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/ChatAC/stats.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/advancements/5f78f1ca-39b8-3abb-b982-7e37bed97dc3.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/advancements/5f78f1ca-39b8-3abb-b982-7e37bed97dc3.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/random_sequences.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.-1.-1.mca" afterDir="false" />
@@ -133,19 +44,18 @@
       <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_nether/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/world_the_end/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/AntiSpamPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/AntiSpamPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/commands/AntiSpamCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/commands/AntiSpamCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/ChatLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/ChatLimiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/WhisperLimiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/listeners/WhisperLimiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/managers/StatsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/managers/StatsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/utils/ProfanityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yourname/antispam/utils/ProfanityFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paper-plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/消息间隔检测说明.md" beforeDir="false" afterPath="$PROJECT_DIR$/消息间隔检测说明.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,26 +102,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AntiSpam [runServer --args=\"nogui\"].executor": "Run",
-    "Gradle.Build.executor": "Run",
-    "Gradle.C:/Users/maojf/Documents/GitHub/AntiSpam [wrapper --gradle-version=latest].executor": "Run",
-    "Gradle.ChatAC [clean].executor": "Run",
-    "Gradle.Run.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maojf/Documents/GitHub/ChatAC",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AntiSpam [runServer --args=\&quot;nogui\&quot;].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.C:/Users/maojf/Documents/GitHub/AntiSpam [wrapper --gradle-version=latest].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatAC [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Run.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maojf/Documents/GitHub/ChatAC&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maojf\Documents\GitHub\AntiSpam\run\plugins" />

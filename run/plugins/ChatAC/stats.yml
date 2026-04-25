@@ -1,71 +1,105 @@
 stats:
   5f78f1ca-39b8-3abb-b982-7e37bed97dc3:
-    messages: 170
-    violations: 84
+    messages: 300
+    violations: 234
     records:
-    - 1777053885001|profanity|sbsbsbsbs
-    - 1777053890743|spam|让自己显得像个裁判
-    - 1777053891093|spam|对别人评头论足
-    - 1777053891892|spam|却从不接受任何质疑
-    - 1777053892441|spam|你站在那里
-    - 1777053893092|spam|像是掌握真理的人
-    - 1777053894541|spam|你说话的样子
-    - 1777053894942|spam|仿佛全世界都欠你一个认可
-    - 1777053895992|spam|可问题是
-    - 1777053896390|spam|你连让人认可的实力都没有
-    - 1777053896741|spam|你所有的自信
-    - 1777053897591|spam|而那堵墙上，
-    - 1777053898542|spam|没有任何的基石，
-    - 1777053899727|spam|只有你自己编织的空洞幻想
-    - 1777053900040|spam|你所谓的“理性”
-    - 1777053901591|spam|你所谓的“客观”
-    - 1777053902191|spam|只是对自己有利的角度
-    - 1777053903191|spam|一旦触及你的盲区
-    - 1777053908040|spam|MZC-Client Super 241352012
-    - 1777053908691|spam|MZC-Client Super 241352012
-    - 1777053909442|spam|MZC-Client Super 241352012
-    - 1777053910290|spam|MZC-Client Super 241352012
-    - 1777053911000|similarity|MZC-Client Super 241352012
-    - 1777053911741|similarity|MZC-Client Super 241352012
-    - 1777053912441|similarity|MZC-Client Super 241352012
-    - 1777053913141|similarity|MZC-Client Super 241352012
-    - 1777053913893|similarity|MZC-Client Super 241352012
-    - 1777053914743|similarity|MZC-Client Super 241352012
-    - 1777054453451|profanity|sbsbsbssbsb
-    - 1777054454698|profanity|sbsbsbssbsb
-    - 1777054455274|profanity|sbsbsbssbsb
-    - 1777054455696|profanity|sbsbsbssbsb
-    - 1777054456123|profanity|sbsbsbssbsb
-    - 1777054456311|profanity|sbsbsbssbsb
-    - 1777054459556|spam|111111111
-    - 1777054459908|spam|111111111
-    - 1777054460247|spam|111111111
-    - 1777054460549|spam|111111111
-    - 1777054460865|spam|111111111
-    - 1777054461546|similarity|111111111
-    - 1777054461914|similarity|111111111
-    - 1777054462264|similarity|111111111
-    - 1777054462629|similarity|111111111
-    - 1777054463025|similarity|111111111
-    - 1777054463318|similarity|111111111
-    - 1777054463696|similarity|111111111
-    - 1777054883358|profanity|111111111s b111
-    - 1777054912381|profanity|sb
-    - 1777054913830|profanity|sb
-    - 1777054914250|profanity|sb
-    - 1777054914600|profanity|sb
-    - 1777054914941|profanity|sb
-    - 1777054915350|profanity|sb
-    - 1777054916121|profanity|sb
-    - 1777054916577|profanity|sb
-    - 1777054916961|profanity|sb
-    - 1777054917346|profanity|sb
-    - 1777054934623|spam|666
-    - 1777054974991|spam|对别人评头论足
-    - 1777055631943|spam|MZC-Client Super 241352012 v淆1xeb贙7蛁p
-    - 1777055636741|spam|MZC-Client Super 241352012 蝿餟摦u8mp8闏e
-    - 1777055641544|spam|MZC-Client Super 241352012 繜c8914e3h簲
-    - 1777055646342|spam|MZC-Client Super 241352012 9鰴瓰胹889z橾冟
-    - 1777055651141|spam|MZC-Client Super 241352012 惞y线e4f谷5蘳俄
-    - 1777055665542|bot-pattern|MZC-Client Super 241352012 ew萓e78鴬韽kc
-    - 1777055675141|bot-pattern|MZC-Client Super 241352012 vs銨9v7甾湒00
+    - 1777092374673|bot-pattern|MZC-Client Super 241352012 769qi業湘9p兇
+    - 1777092376471|bot-pattern|MZC-Client Super 241352012 f6梈鰯篁哮縬06t
+    - 1777092378271|bot-pattern|MZC-Client Super 241352012 f臈l爵x聰穭逺ve
+    - 1777092380072|bot-pattern|MZC-Client Super 241352012 py郥78桠8m呰喚
+    - 1777092381871|bot-pattern|MZC-Client Super 241352012 窎8j5c梂湇vdi
+    - 1777092383671|bot-pattern|MZC-Client Super 241352012 苆z6爗熮扃琌5眵9
+    - 1777092385472|bot-pattern|MZC-Client Super 241352012 bg囻6红59穢4薡
+    - 1777092387271|bot-pattern|MZC-Client Super 241352012 9戳锳頙y讋鞋xzl
+    - 1777092389071|bot-pattern|MZC-Client Super 241352012 ps瑬97縯te32
+    - 1777092390871|bot-pattern|MZC-Client Super 241352012 2閥4997x鯺1x
+    - 1777092392671|bot-pattern|MZC-Client Super 241352012 d翂緁枿h61嘰mf
+    - 1777092394470|bot-pattern|MZC-Client Super 241352012 簥鵬泉鷛砐飬k1w毵
+    - 1777092396271|bot-pattern|MZC-Client Super 241352012 b材s橵0k邶025
+    - 1777092398073|bot-pattern|MZC-Client Super 241352012 4典rx9壘辉厕侞7
+    - 1777092399871|bot-pattern|MZC-Client Super 241352012 9ck菗j帯漆簈f愾
+    - 1777092401671|bot-pattern|MZC-Client Super 241352012 莑c0袗9蹕xji炻
+    - 1777092403471|bot-pattern|MZC-Client Super 241352012 bk锇衘5317m裠
+    - 1777092405271|bot-pattern|MZC-Client Super 241352012 0k4諦p闡9啸fy
+    - 1777092407071|bot-pattern|MZC-Client Super 241352012 6h83t漚嫜屦峕鈃
+    - 1777092416071|bot-pattern|MZC-Client Super 241352012 e樚7鏉y蔧8陀玒5
+    - 1777092417871|bot-pattern|MZC-Client Super 241352012 6怾7bl彽w3霩6
+    - 1777092419671|bot-pattern|MZC-Client Super 241352012 羒坂b9鱿郞5xg末
+    - 1777092421471|bot-pattern|MZC-Client Super 241352012 t旯胬j仼mw3攼b
+    - 1777092430474|bot-pattern|MZC-Client Super 241352012 ze3橶4軯91hy
+    - 1777092432273|bot-pattern|MZC-Client Super 241352012 5j2橂餬q砼u6谺
+    - 1777092434073|bot-pattern|MZC-Client Super 241352012 k昛z12y779祒
+    - 1777092435871|bot-pattern|MZC-Client Super 241352012 z6鎲扁c揾鮙55a
+    - 1777092437673|bot-pattern|MZC-Client Super 241352012 7g鿶uf諕178t
+    - 1777092439470|bot-pattern|MZC-Client Super 241352012 d峤59t6禶s4k
+    - 1777092441272|bot-pattern|MZC-Client Super 241352012 9岡13439u7涆
+    - 1777092443072|bot-pattern|MZC-Client Super 241352012 g6蓟芎3p弞mv庞
+    - 1777092444871|bot-pattern|MZC-Client Super 241352012 p鴒8幹673a榘8
+    - 1777092446673|bot-pattern|MZC-Client Super 241352012 snl鵫b鐣糦e3d
+    - 1777092448473|bot-pattern|MZC-Client Super 241352012 籵6瑍枞哷1s洔0狒
+    - 1777092450271|bot-pattern|MZC-Client Super 241352012 4鸜縫4沒3lr篨6
+    - 1777092452072|bot-pattern|MZC-Client Super 241352012 秅礛闎顭8痝誻4wa
+    - 1777092453873|bot-pattern|MZC-Client Super 241352012 agd稦e溢w4hn
+    - 1777092455671|bot-pattern|MZC-Client Super 241352012 d筪r3菫x帧7缓鹊
+    - 1777092457473|bot-pattern|MZC-Client Super 241352012 呭m53d梒02期1
+    - 1777092459271|bot-pattern|MZC-Client Super 241352012 7n舸et5lj00
+    - 1777092461071|bot-pattern|MZC-Client Super 241352012 zx09dn荺4戂3
+    - 1777092462872|bot-pattern|MZC-Client Super 241352012 u爔尉1s2zz1f
+    - 1777092464671|bot-pattern|MZC-Client Super 241352012 x缇x嚒x秌79瀽y
+    - 1777092466473|bot-pattern|MZC-Client Super 241352012 熖8炨b6w嫠瞗氀騂
+    - 1777092468273|bot-pattern|MZC-Client Super 241352012 fj攙囒hw跋f5挿
+    - 1777092470073|bot-pattern|MZC-Client Super 241352012 r3ei9cy34j
+    - 1777092471870|bot-pattern|MZC-Client Super 241352012 6让c儔嶝4v957
+    - 1777092473671|bot-pattern|MZC-Client Super 241352012 79孋瑲7i漀8闗1
+    - 1777092483024|bot-pattern|MZC-Client Super 241352012 w5橄濹睽jkb47
+    - 1777092484823|bot-pattern|MZC-Client Super 241352012 黝違w槝郵e苞3逥1
+    - 1777092486621|bot-pattern|MZC-Client Super 241352012 dz298loi7l
+    - 1777092488422|bot-pattern|MZC-Client Super 241352012 ob5硚o繜伈鿂q2
+    - 1777092490221|bot-pattern|MZC-Client Super 241352012 0纰餹葷孁埻谽fre
+    - 1777092492023|bot-pattern|MZC-Client Super 241352012 3ycu鿮男述銫璷p
+    - 1777092493822|bot-pattern|MZC-Client Super 241352012 iqgl谡j2淯51
+    - 1777092495623|bot-pattern|MZC-Client Super 241352012 rx861b7sn2
+    - 1777092497423|bot-pattern|MZC-Client Super 241352012 填9lo9棝kx1r
+    - 1777092499221|bot-pattern|MZC-Client Super 241352012 a6g筩i9k瘠柂訐
+    - 1777092501023|bot-pattern|MZC-Client Super 241352012 屯d77如懙玂7蝿6
+    - 1777092502824|bot-pattern|MZC-Client Super 241352012 66膝1绿67寣牨h
+    - 1777092504621|bot-pattern|MZC-Client Super 241352012 o2竔5刦汆頿gf8
+    - 1777092506423|bot-pattern|MZC-Client Super 241352012 lc7amrj04d
+    - 1777092508221|bot-pattern|MZC-Client Super 241352012 h郬籟媗3ec寜su
+    - 1777092510023|bot-pattern|MZC-Client Super 241352012 圛1i檉4ml槹惽4
+    - 1777092511825|bot-pattern|MZC-Client Super 241352012 9x68缅43貉峊y
+    - 1777092513622|bot-pattern|MZC-Client Super 241352012 詩切豈腦o28訆13
+    - 1777092515422|bot-pattern|MZC-Client Super 241352012 482燥3mvn26
+    - 1777092517223|bot-pattern|MZC-Client Super 241352012 nb酏f4酬7避q8
+    - 1777092519022|bot-pattern|MZC-Client Super 241352012 o誣d缫db雜e64
+    - 1777092520822|bot-pattern|MZC-Client Super 241352012 kc皵lq飀g1o3
+    - 1777092667471|bot-pattern|MZC-Client Super 241352012 8bg衜12榇4膹y
+    - 1777092669271|bot-pattern|MZC-Client Super 241352012 i義蟲i央嫏2u剦7
+    - 1777092671070|bot-pattern|MZC-Client Super 241352012 蠃鮃m3f穣r呙6奮
+    - 1777092672871|bot-pattern|MZC-Client Super 241352012 瑗64麕涏l28b2
+    - 1777092685473|bot-pattern|MZC-Client Super 241352012 vm揲kz嫦n36n
+    - 1777092687271|bot-pattern|MZC-Client Super 241352012 6dxm栗乃軼y偑a
+    - 1777092689072|bot-pattern|MZC-Client Super 241352012 b2qg30猏e5夒
+    - 1777092690871|bot-pattern|MZC-Client Super 241352012 窏趫d60u蚃wz佂
+    - 1777092692671|bot-pattern|MZC-Client Super 241352012 8察6l蘊烘zjtl
+    - 1777092694475|bot-pattern|MZC-Client Super 241352012 4za皐烥tfw61
+    - 1777092696270|bot-pattern|MZC-Client Super 241352012 f97u燛18e7f
+    - 1777092698070|bot-pattern|MZC-Client Super 241352012 z4b9淾0mr98
+    - 1777092699871|bot-pattern|MZC-Client Super 241352012 jd0a禾阎膐忣5v
+    - 1777092701671|bot-pattern|MZC-Client Super 241352012 5蕓004p骏f舒e
+    - 1777092703471|bot-pattern|MZC-Client Super 241352012 mj獆91bkq21
+    - 1777092705271|bot-pattern|MZC-Client Super 241352012 k靀h3q3u煅i鄝
+    - 1777092707973|spam|MZC-Client Super 241352012 裑茧84h侶厖as湓
+    - 1777092711771|spam|MZC-Client Super 241352012 3i67b珊揮m73
+    - 1777092714471|spam|MZC-Client Super 241352012 ap宾543x1奲8
+    - 1777092716572|spam|MZC-Client Super 241352012 8q蚨r诽9ysro
+    - 1777092719023|spam|MZC-Client Super 241352012 wh4脰鏦濮酨ubx
+    - 1777092721820|spam|MZC-Client Super 241352012 94冫靋e鶢侲2u3
+    - 1777092724670|spam|MZC-Client Super 241352012 鴖c菩033瘶w臸泝
+    - 1777092727521|spam|MZC-Client Super 241352012 c3tpe蠙3k5蝨
+    - 1777092730421|spam|MZC-Client Super 241352012 z36550f馩73
+    - 1777092732853|spam|MZC-Client Super 241352012 8622圲霢0f赀e
+    - 1777092736371|spam|MZC-Client Super 241352012 讵鼼啋54鑼岈警従6
+    - 1777092738071|spam|MZC-Client Super 241352012 j8a癒s1eoz涣
+    - 1777092741272|spam|MZC-Client Super 241352012 扗詹v桻6c鎺0愇6
+    - 1777092744070|spam|MZC-Client Super 241352012 龭a佛9騬y0xm彥

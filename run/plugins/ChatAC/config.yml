@@ -18,3 +18,5 @@ anti-spam:
 
     # 私信检测配置
   whisper-check: true # 是否对私信进行检测（true=检测私信，false=不检测私信）
+  auto-mute:
+    violations-per-minute: 30

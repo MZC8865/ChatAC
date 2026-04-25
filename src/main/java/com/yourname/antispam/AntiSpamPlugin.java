@@ -33,6 +33,10 @@ public class AntiSpamPlugin extends JavaPlugin {
     private volatile boolean whisperCheckEnabled = true;
     // Interval pattern detection configuration
     private volatile boolean intervalCheckEnabled = true;
+    // Auto-mute configuration
+    private volatile boolean autoMuteEnabled = true;
+    private volatile int autoMuteViolationsPerMinute = 5;
+    private volatile long autoMuteDuration = 300L; // seconds
     // Mute manager
     private MuteManager muteManager;
     // Whitelist manager
@@ -213,6 +217,36 @@ public class AntiSpamPlugin extends JavaPlugin {
         getLogger().info("Interval pattern check " + (enabled ? "enabled" : "disabled"));
     }
 
+    // Getters/setters for auto-mute configuration
+    public synchronized boolean isAutoMuteEnabled() {
+        return autoMuteEnabled;
+    }
+
+    public synchronized void setAutoMuteEnabled(boolean enabled) {
+        this.autoMuteEnabled = enabled;
+        getLogger().info("Auto-mute " + (enabled ? "enabled" : "disabled"));
+    }
+
+    public synchronized int getAutoMuteViolationsPerMinute() {
+        return autoMuteViolationsPerMinute;
+    }
+
+    public synchronized void setAutoMuteViolationsPerMinute(int violations) {
+        if (violations < 1) violations = 1;
+        this.autoMuteViolationsPerMinute = violations;
+        getLogger().info("Auto-mute violations threshold set to " + violations + " per minute");
+    }
+
+    public synchronized long getAutoMuteDuration() {
+        return autoMuteDuration;
+    }
+
+    public synchronized void setAutoMuteDuration(long seconds) {
+        if (seconds < 1) seconds = 1;
+        this.autoMuteDuration = seconds;
+        getLogger().info("Auto-mute duration set to " + seconds + " seconds");
+    }
+
     // Getter for mute manager
     public MuteManager getMuteManager() {
         return muteManager;
@@ -253,6 +287,11 @@ public class AntiSpamPlugin extends JavaPlugin {
         // Load interval check setting
         this.intervalCheckEnabled = getConfig().getBoolean("anti-spam.interval-check", true);
         
+        // Load auto-mute settings
+        this.autoMuteEnabled = getConfig().getBoolean("anti-spam.auto-mute.enabled", true);
+        this.autoMuteViolationsPerMinute = getConfig().getInt("anti-spam.auto-mute.violations-per-minute", 5);
+        this.autoMuteDuration = getConfig().getLong("anti-spam.auto-mute.mute-duration", 300L);
+        
         getLogger().info("AntiSpam config loaded: delayMs=" + antiSpamDelayMs + 
             ", similarityCheck=" + similarityCheckEnabled + 
             ", threshold=" + similarityThreshold + 
@@ -260,7 +299,9 @@ public class AntiSpamPlugin extends JavaPlugin {
             ", profanityFilter=" + profanityFilterEnabled +
             ", blockedWords=" + profanityFilter.getBlockedWordCount() +
             ", whisperCheck=" + whisperCheckEnabled +
-            ", intervalCheck=" + intervalCheckEnabled);
+            ", intervalCheck=" + intervalCheckEnabled +
+            ", autoMute=" + autoMuteEnabled + 
+            " (threshold=" + autoMuteViolationsPerMinute + "/min, duration=" + autoMuteDuration + "s)");
     }
     
     // Save a config value to disk
